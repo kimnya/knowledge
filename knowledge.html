@@ -11,8 +11,22 @@
       <li>
         이벤트 루프:
         <p>
-          태스크를 끊임없이 처리 taskqueue에 쌓인 함수를 callstack으로
+          태스크를 끊임없이 처리 taskqueue에 쌓인 함수를 callstack으로<br />
           실시간으로 검사해서 옮김
+        </p>
+      </li>
+      <li>
+        불변성:
+        <p>
+          참조객체(object,array)의 값은 heapmemory에 저장되고 주소값을 가져와<br />
+          사용하기 때문에 값을 변경할 수 있다. 값의 변경으로 코드의 예상치
+          못한<br />
+          오류와 복잡도를 방지하기 위해 지켜야 하는 룰 그것을 막기위해 spread<br />
+          연산자,useState등으로 원본을 복사한 후 상태값을 변경한다. react의
+          경우<br />
+          callstack의 들어간 heapmemory의 주소값이 달라져야 상태변경을
+          인식하기<br />
+          때문에 사용하기도 한다.
         </p>
       </li>
     </ol>
