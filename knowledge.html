@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>기본지식공부</h1>
-    <ol>
+    <ul>
       <li>
         이벤트 루프:
         <p>
@@ -87,6 +87,89 @@
           1번데이터를 삭제하거나 데이터 내용을 수정한다.
         </p>
       </li>
-    </ol>
+      mysql 환경설정
+      <li>
+        ---mysql테이블 대소문자 허용방법---
+        <ol>
+          <li>
+            <p>
+              xampp을 다운 받고 나면 콘솔?비슷한 창에 mysql config가 있다.<br />
+              버튼을 누르면 my.ini라는 선택창이 나온다. 버튼을 누르면 메모장에
+              mysql과 관련된 정보가 나온다.<br />
+              메모 검색기능으로 [mysqld] 부분을 찾는다. 포트번호 위에 적는다.<br />
+              lower_case_table_names =2를 적는다.<br />
+              *대소문자를 알아서 구분을 허용해주는 명령어이다.
+            </p>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        ---mysql 마스터 계정 생성법---
+        <ol>
+          <li>
+            <p>
+              mysql을 실행 (start)한 후 shell버튼을 누른다. cmd창 같은게
+              나온다.<br />
+              mysql -u root을 입력한다.<br />
+              GRANT ALL PRIVILEGES ON *.* TO 아이디@`%` IDENTIFIED BY
+              `비밀번호`를 입력한다.<br />
+              *모든 데이터베이스안에 테이블의 권한을 내가 만든 마스터 계정에게
+              넘겨준다. <br />*마스터 계정으로 로그인 할땐 mysql -u 아이디 -p로
+              입력한다.
+            </p>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        ---mysqlyog 툴 다운로드 방법---
+        <ol>
+          <li>
+            <p>
+              https://github.com/webyog/sqlyog-community/wiki/Downloads로
+              들어간다.<br />
+              SQLyog Community Edition - 13.2.1 (64-Bit) or 최신버전을 다운로드
+              받는다.
+            </p>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        ---mysqlyog 툴 새연결 접속방법 ---
+        <ol>
+          <li>
+            <p>
+              파일 탭안에 새연결탭을 누른다.<br />
+              새연결버튼을 누르고 root@localhost를 입력한다.<br />
+              사용자이름을 마스테계정 아이디명으로 바꾼다. <br />비밀번호를
+              마스테계정 비밀번호로 바꾼다. <br />연결누른다.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        ---mysqlyog 툴 환경설정---
+        <ol>
+          <li>
+            <p>
+              도구탭안에 환경설정 탭을 누른다.<br />
+              일반 탭에 메세지 탭에서 경고보기를 활성화해준다.<br />
+              글꼴 & 편집기 설정에 들어가서 D2코딩 18px(sql편집기),14px(나머지)
+              수정한다.<br />
+              탭크기 4로 수정하고 삽입공간 활성화한다. <br />*D2코딩폰트는
+              https://github.com/naver/d2codingfont/releases에 들어간다.<br />
+              Assets부분에 가장 최신버전을 다운로드 받는다. <br />알집에서
+              D2코딩폴더에 들어간다.<br />
+              bold체만 더블클릭하여 설치한다.<br />
+              데이터베이스는 테이블들의 묶음이다.<br />
+              숙달할 시간이 부족하다. 한번 배울때 최대한 자세히 기록을 남기기로
+              마음 먹었다.
+            </p>
+          </li>
+        </ol>
+      </li>
+    </ul>
   </body>
 </html>
